@@ -1,48 +1,69 @@
 /* General page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f4f4 0%, #e8e8e8 100%);
     margin: 0;
     padding: 0;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Header section styling */
 header {
-    background: #333;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: #fff;
-    padding: 10px 0;
+    padding: 25px 0;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Styling for team logo image */
-.team-logo {
-    width: 150px; /* Adjust the size as needed */
-    margin-top: 10px;
+.project5 {
+    width: 180px;
+    margin: 10px auto 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+    border: 3px solid white;
 }
 
 /* Menu button styling */
 header nav {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 header nav button {
-    background: #007BFF;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 8px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Flex container for team bios and vision sections */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -51,40 +72,154 @@ header nav button:hover {
 /* Card styling for individual team bios */
 .card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin: 15px;
+    padding: 25px;
     flex: 1 1 calc(30% - 40px);
     text-align: center;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eaeaea;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-h2 {
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+}
+
+.card h2 {
     margin: 0 0 10px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 0 0 15px;
+    color: #7f8c8d;
+    font-weight: 500;
 }
 
 /* Initially hide bio details */
 .bio {
     display: none;
-    margin-top: 10px;
+    margin-top: 15px;
     color: #555;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    text-align: left;
+}
+
+/* Moodboard container styling */
+.moodboard-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.moodboard {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #eaeaea;
+}
+
+.moodboard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Button styling */
 button {
-    background: #007BFF;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    margin-top: 10px;
 }
 
 button:hover {
-    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Vision section styling */
+#vision {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#vision h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#vision p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Animation for moodboard */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(45% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    header nav button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
 }
